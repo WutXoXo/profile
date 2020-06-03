@@ -26,6 +26,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">    
     <style>
+         @CHARSET "UTF-8";
+        .page-break {
+        page-break-after: always;
+        page-break-inside: avoid;
+        clear:both;
+        }
+        .page-break-before {
+        page-break-before: always;
+        page-break-inside: avoid;
+        clear:both;
+        }
         .header-logo>a>img {
           border-radius: 50%;
           margin-top: 4px;
@@ -72,7 +83,7 @@
 
     </header> <!-- end s-header -->
 
-
+    <div id="html-2-pdfwrapper">
    <!-- home
    ================================================== -->
    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpeg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
@@ -223,7 +234,7 @@
         <div class="row about-content about-content--buttons">
 
             <div class="col-full tab-full">
-                <a href="#0" class="btn btn--primary full-width">Download PDF</a>
+                <a href="#0" class="btn btn--primary full-width" onclick="generate()">Download PDF</a>
             </div>
            
 
@@ -510,6 +521,7 @@
 
     </section> <!-- end s-contact -->
 
+    </div>
 
     <!-- footer
     ================================================== -->
@@ -614,7 +626,14 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
     <script>
+        var margins = {
+        top: 70,
+        bottom: 40,
+        left: 30,
+        width: 550
+        };
         var mobile =  CryptoJS.AES.decrypt("U2FsdGVkX18G9KzsfUMQsMod+ZjXaVbzPVBXRlwR8UXfCX6ONwXSJurO8W59uHEPF5l1qY56PQAaXfilJT+0ovpdksVxbJVatGEgBOPqz4g=", "8XCCD3Cnsiu4SDOJlhGEAXH0FTjXDWIU");
         var email = CryptoJS.AES.decrypt("U2FsdGVkX18TY1vm+y3sSqr7p65ctfBbYgA6kq9Xoy+BCrb55kI7Afn5iPZtBwn5dpQ9BuuJb2QSQFU87AYBJ0RQ2wLgKMwJl71g700wwuNeO6fSx91AVrdfBRD/y47D1Y+uT5TY49RePxvezEH8jZjsyd3/uXn37ZKdxh37id+/w9bKD+l9J+DK88L52DkUSQr5Y6uPVyt/Pk4XVzqgwA==", "wA0AL5YYzgEnPYQckU4x8dBE9mzQiBlb");
         var addr = CryptoJS.AES.decrypt("U2FsdGVkX18gi57+Al7Dq7zgj06UFCAo0Rs70jeDUcrYMqyj/DyMBKWOoQBExEnLYNGgNM5mJYioG5GFuyKD/88b2GX62PZ++EViKtH9Kq1ILBOf32xQejy48SUdl9UZwJpVDfhP1B8C4XpOLuyCS+DUT6JakHvJQpXPNXLcydk9cENNIw06z60CCvVfJ9ArMi6H9p0fqBt2J+gOiRWKwPYX+GZ8cavvwIq05koE+itiOKJF5mQh/ASp2yKKW+8Wh1msprQCn7hwLY6NzrjdQZBTUw1hfu6lsdbHUJVKGeI=", "rq5sACi73oZEkq5cw6o5bG74x0f1yWMS");
@@ -623,6 +642,38 @@
         document.getElementById("c_email").innerHTML = email.toString(CryptoJS.enc.Utf8);
         document.getElementById("c_addr").innerHTML = addr.toString(CryptoJS.enc.Utf8);
         document.getElementById("c_name").innerHTML = cname.toString(CryptoJS.enc.Utf8);
+
+        var generate = function()
+        {
+            var pdf = new jsPDF('p', 'pt', 'a4');
+            pdf.setFontSize(18);
+            pdf.fromHTML(document.getElementById('html-2-pdfwrapper'), 
+                margins.left, // x coord
+                margins.top,
+                {
+                // y coord
+                width: margins.width// max width of content on PDF
+                },function(dispose) {
+                headerFooterFormatting(pdf)
+                }, 
+                margins);
+                
+            pdf.save('resume-worawut.o.pdf');
+        };
+        function headerFooterFormatting(doc)
+        {
+            var totalPages  = doc.internal.getNumberOfPages();
+
+            for(var i = totalPages; i >= 1; i--)
+            { //make this page, the current page we are currently working on.
+                doc.setPage(i);      
+                            
+                header(doc);
+                
+                footer(doc, i, totalPages);
+                
+            }
+        };
     </script>
 
 </body>
