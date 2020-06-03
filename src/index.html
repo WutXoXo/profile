@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>สวัสดี</title>
+    <meta name="description" content="Resume Worawut.o">
+    <meta name="keywords" content="worawut,ouncharoen,resume">
+    <meta name="author" content="Worawut Ouncharoen">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">    
+    <style>
+        .header-logo>a>img {
+          border-radius: 50%;
+          margin-top: 4px;
+          width: 80%;
+          height:80%;
+        }
+        </style>
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script src="https://kit.fontawesome.com/d3acfe00cc.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/logo.jpg" alt="Homepage"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li class="current"><a class="smoothscroll"  href="#home" title="home">โฮมเพจ</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">เกี่ยวกับ</a></li>
+                <li><a class="smoothscroll"  href="#works" title="works">โครงการ</a></li>
+                <li><a class="smoothscroll"  href="#contact" title="contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+   <!-- home
+   ================================================== -->
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpeg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>สวัสดี</h3>
+
+                <h1>
+                    <p id="c_name"></p>
+                    <p>รักในการเขียนโปรแกรม</p>
+                    <p>รักในการขับมอเตอร์ไซค์ท่องเที่ยว</p>
+                </h1>                
+                <div class="home-content__buttons">
+                    <a href="#works" class="smoothscroll btn btn--stroke">
+                        โครงการล่าสุด
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        เพิ่มเติมเกี่ยวกับฉัน
+                    </a>
+                </div>
+
+                <div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>เลื่อนลง</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social">
+            <li>
+                <a href="https://www.facebook.com/WutXoXo/" target="_blank"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/worawut.o" target="_blank"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/user/wutpabjik" target="_blank"><i class="im im-youtube" aria-hidden="true"></i><span>Youtube</span></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/Wut_Ouncharoen" target="_blank"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="https://gitlab.com/WutXoXo" target="_blank"><i class="fab fa-gitlab" aria-hidden="true"></i></i><span>Gitlab</span></a>
+            </li>
+            <li>
+                <a href="https://github.com/WutXoXo" target="_blank"><i class="fab fa-github" aria-hidden="true"></i><span>Github</span></a>
+            </li>
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+        
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h1>เพิ่มเติมเกี่ยวกับฉัน</h1>
+                <p class="lead"></p>
+            </div>
+        </div>
+
+        <div class="row about-content">
+
+            <div class="col-six tab-full left">
+                <h3>การศึกษาของฉัน!</h3>
+                <div class="timeline">
+
+                    <div class="timeline__block timeline__block_20" >
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">มิถุนายน 2009 - มิถุนายน 2013</p>
+                            <h3>ปริญญาตรี วท.บ. เทคโนโลยีสารสนเทศและการสื่อสาร</h3>
+                            <h5>สาขาเทคโนโลยีสารสนเทศและการสื่อสาร คณะวิทยาการสารสนเทศ มหาวิทยาลัยมหาสารคาม</h5>
+                        </div>
+                        
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block timeline__block_20">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">พฤษภาคม 2006 - มิถุนายน 2009</p>
+                            <h3>มัธยมศึกษาตอนปลาย</h3>
+                            <h5>โรงเรียนคึมใหญ่วิทยา จังหวัดอำนาจเริญ</h5>
+                        </div>                        
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block timeline__block_20">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">พฤษภาคม 2003 - พฤษภาคม 2006</p>
+                            <h3>มัธยมศึกษาตอนต้น</h3>
+                            <h5>โรงเรียนคึมใหญ่วิทยา จังหวัดอำนาจเริญ</h5>
+                        </div>                        
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div>
+
+            <div class="col-six tab-full right">
+                <h3>ฉันมีทักษะบางอย่าง</h3>
+
+                <ul class="skill-bars">
+                    <li>
+                        <div class="progress percent90 blue"><span>90%</span></div>
+                        <strong>C#</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent85 yellow"><span>85%</span></div>
+                        <strong>SQL</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent80 orange"><span>80%</span></div>
+                        <strong>HTML</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent75 blue"><span>75%</span></div>
+                    <strong>CSS</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent70 red"><span>70%</span></div>
+                    <strong>Angular JS</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent50 blue"><span>50%</span></div>
+                    <strong>PHP</strong>
+                    </li>
+                    <li>
+                        <div class="progress percent30 red"><span>30%</span></div>
+                        <strong>Java</strong>
+                        </li>
+                </ul>
+            </div>
+
+        </div> <!-- end about-content -->
+
+        <div class="row about-content about-content--buttons">
+
+            <div class="col-full tab-full">
+                <a href="#0" class="btn btn--primary full-width">Download PDF</a>
+            </div>
+           
+
+        </div> <!-- end about-content buttons -->
+
+        <div class="row about-content about-content--timeline">
+
+            <div class="col-full text-center">
+                <h3>ประสบการณ์การทำงานของฉัน</h3>
+            </div>
+
+            <div class="col-six tab-full left">
+                <div class="timeline">
+
+                    <div class="timeline__block timeline__block_20">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">เมษายน 2020 - ปัจจุบัน</p>
+                            <h3>บริษัท ซีเนท ซิสเต็มส์ คอร์ปอเรชั่น จํากัด</h3>
+                            <h5>Backend Developer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>
+                                วิเคราะห์และออกแบบการทำงานของ api และ ฐานข้อมูล พร้อมควบคุมทีมและพัฒนา api ในโครงการ 
+                                <a href="https://play.google.com/store/apps/details?id=com.ssc.expert.platform.patient" target="_blank">หมอแคร์</a>
+                                ให้กับโรงพยาบาลสิรินธร
+                            </p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block timeline__block_20">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">พฤษภาคม 2018 - เมษายน 2020</p>
+                            <h3>บริษัท ซีเนท ซิสเต็มส์ คอร์ปอเรชั่น จํากัด</h3>
+                            <h5>Backend Developer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>
+                                วิเคราะห์และออกแบบการทำงานของ api และ ฐานข้อมูล พร้อมควบคุมทีมและพัฒนา api ในโครงการ 
+                                <a href="https://afarmmart.com/" target="_blank">Afarmmart.com</a>
+                                ให้กับบริษัท ไทยธุรกิจเกษตร จำกัด
+                            </p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block timeline__block_20">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">กุมภาพันธ์ 2018 - พฤษภาคม 2018</p>
+                            <h3>บริษัท ซีเนท ซิสเต็มส์ คอร์ปอเรชั่น จํากัด</h3>
+                            <h5>Full Stack Developer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>
+                                วิเคราะห์และออกแบบพร้อมพัฒนาทั้ง ui,api และ ฐานข้อมูล พร้อมควบคุมทีมในโครงการ 
+                                <a href="https://play.google.com/store/apps/details?id=com.senate.thpmessengerpostdrive&hl=th" target="_blank">Messenger Post</a>
+                                ให้กับบริษัท ไปรษณีย์ไทย จำกัด
+                            </p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
+
+            <div class="col-six tab-full right">
+                <div class="timeline">
+
+                    <div class="timeline__block timeline__block_20">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">เมษายน 2015 - กุมภาพันธ์ 2018</p>
+                            <h3>บริษัท ซีเนท ซิสเต็มส์ คอร์ปอเรชั่น จํากัด</h3>
+                            <h5>Full Stack Developer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>
+                                วิเคราะห์และออกแบบพร้อมพัฒนาระบบรับชำระเงิน (Payment Service) ทั้ง ui,api และ ฐานข้อมูล ในโครงการ 
+                                New CA POS
+                                ให้กับบริษัท ไปรษณีย์ไทย จำกัด
+                            </p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block timeline__block_20">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">มิถุนายน 2014 - เมษายน 2015</p>
+                            <h3>บริษัท ซีเนท ซิสเต็มส์ คอร์ปอเรชั่น จํากัด</h3>
+                            <h5>SQL Developer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>
+                                วิเคราะห์และออกแบบการทำงานของ Stored Procedure และ ฐานข้อมูลพร้อมพัฒนา ในโครงการ
+                                ระบบบริหารกองทุนสงเคราะห์ ให้กับกองทุนสงเคราะห์ครูเอกชน
+                            </p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block timeline__block_20">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">ตุลาคม 2013 - มิถุนายน 2014</p>
+                            <h3>บริษัท ซีเนท ซิสเต็มส์ คอร์ปอเรชั่น จํากัด</h3>
+                            <h5>SQL Developer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>
+                                วิเคราะห์และออกแบบการทำงานของ Stored Procedure และ ฐานข้อมูลพร้อมพัฒนา ในโครงการ Back office ให้กับโพธาลัย เลเชอร์ ปาร์ค และ สลิมมิ่งพลัส                                
+                            </p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end right -->
+
+        </div> <!-- end about-content timeline -->
+
+    </section> <!-- end about -->
+    
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3>ผลงาน</h3>
+                <h1>ดูโครงการล่าสุดของฉัน</h1>
+                
+                <p class="lead"></p>
+            </div>
+        </div>
+
+        <div class="row masonry-wrap">
+            <div class="masonry">
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-mhor-care.jpg" class="thumb-link" title="Mhor​ Care" data-size="886x1669">
+                                <img src="images/portfolio/mhor-care.png" 
+                                     srcset="images/portfolio/mhor-care.png 1x, images/portfolio/mhor-care.png 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                             Mhor​ Care
+                            </h3>
+                            <p class="item-folio__cat">
+                                Backend Developer
+                            </p>
+                        </div>
+
+                        <div class="item-folio__caption">
+                            <p>แอปพลิเคชันหมอแคร์ (<a href="https://play.google.com/store/apps/details?id=com.ssc.expert.platform.patient" target="_blank">MHOR CARE</a>) เป็นตัวกลางเพื่อเพิ่มประสิทธิภาพในการรับบริการ ให้มีความสะดวก รวดเร็ว ประหยัดเวลา</p>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-afarmmart.jpg" class="thumb-link" title="afarmmart.com" data-size="1366x630">
+                                <img src="images/portfolio/afarmmart.png" 
+                                     srcset="images/portfolio/afarmmart.png 1x, images/portfolio/afarmmart.png 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                afarmmart.com
+                            </h3>
+                            <p class="item-folio__cat">
+                                Backend Developer
+                            </p>
+                        </div>
+
+                        <div class="item-folio__caption">
+                            <p><a href="https://afarmmart.com/" target="_blank">A Farm Mart</a> เป็นช่องทางการจำหน่ายผลิตภัณฑ์ให้กับเกษตรกรสหกรณ์การเกษตรเพื่อการตลาดลูกค้า ธ.ก.ส. (สกต.) ผู้ประกอบการ SMEs เกษตรและวิสาหกิจชุมชนทั่วประเทศ</p>
+                        </div>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-afarmmart-pos.png" class="thumb-link" title="Afarmmart POS" data-size="346x625">
+                                <img src="images/portfolio/g-afarmmart-pos.png" 
+                                     srcset="images/portfolio/g-afarmmart-pos.png 1x, images/portfolio/g-afarmmart-pos.png 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Afarmmart POS
+                            </h3>
+                            <p class="item-folio__cat">
+                                Backend Developer
+                            </p>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p><a href="https://play.google.com/store/apps/details?id=com.senate_system.baac" target="_blank">Afarmmart POS</a> คือระบบจัดการร้านค้า เพื่อสนับสนุนร้านค้าสุดคุ้ม งานขายหน้าร้าน การสั่งซื้อสินค้าเข้าร้าน การจัดการสินค้าคงคลัง รายงานสรุปยอดขาย</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+
+                <div class="masonry__brick">
+                    <div class="item-folio">
+
+                        <div class="item-folio__thumb">
+                            <a href="images/portfolio/gallery/g-MSG.jpg" class="thumb-link" title="Messenger Post" data-size="720x1140">
+                                <img src="images/portfolio/MSG.png" 
+                                     srcset="images/portfolio/MSG.png 1x, images/portfolio/MSG.png 2x" alt="">
+                                <span class="shadow-overlay"></span>
+                            </a>
+                        </div>
+
+                        <div class="item-folio__text">
+                            <h3 class="item-folio__title">
+                                Messenger Post
+                            </h3>
+                            <p class="item-folio__cat">
+                                Full Stack Developer
+                            </p>
+                        </div>
+
+                        <span class="item-folio__caption">
+                            <p><a href="https://play.google.com/store/apps/details?id=com.senate.thpmessengerpostdrive&hl=th" target="_blank">Messenger Post</a> เป็นบริการจัดส่งเอกสาร / สิ่งของ โดยพนักงานไปรษณีย์ไปรับสิ่งของ ณ ที่อยู่ผู้ฝาก และจัดส่งถึงผู้รับ</p>
+                        </span>
+
+                    </div> <!-- end item-folio -->
+                </div> <!-- end masonry__brick -->
+            </div>
+        </div> <!-- end masonry -->
+
+    </section> <!-- end works -->
+    
+
+
+    <!-- s-stats
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="overlay"></div>
+
+        <div class="row narrow section-intro">
+            <div class="col-full">
+                <h3>ติดต่อ</h3>
+                <h1>สวัสดี</h1>
+                
+                <p class="lead"></p>
+            </div>
+        </div>
+
+        <div class="row contact__main">
+            <div class="col-four tab-full contact__infos">
+                <h4 class="h06">เบอร์โทร</h4>
+                <p id = "c_mobile"></p>
+            </div>
+
+            <div class="col-four tab-full contact__infos">                
+                <h4 class="h06">อีเมล</h4>
+                <p id="c_email"></p>
+            </div>
+
+            <div class="col-four tab-full contact__infos">
+                <h4 class="h06">ที่อยู่</h4>
+                <p id="c_addr"></p>
+            </div>
+
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+
+                <div class="footer-logo">
+                    <a class="footer-site-logo" href="index.html"><img src="images/logo.jpg" alt="Homepage"></a>
+                </div>
+
+                <ul class="footer-social">
+                    <li>
+                        <a href="https://www.facebook.com/WutXoXo/" target="_blank"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/worawut.o" target="_blank"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/wutpabjik" target="_blank"><i class="im im-youtube" aria-hidden="true"></i><span>Youtube</span></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Wut_Ouncharoen" target="_blank"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://gitlab.com/WutXoXo" target="_blank"><i class="fab fa-gitlab" aria-hidden="true"></i></i><span>Gitlab</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/WutXoXo" target="_blank"><i class="fab fa-github" aria-hidden="true"></i><span>Github</span></a>
+                    </li>                    
+                </ul>
+                    
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright 2020</span>
+                    <span>Author by <a href="https://www.facebook.com/WutXoXo/" target="_blank">Worawut Ouncharoen</a></span>
+                    <span>Design by <a href="https://www.styleshout.com/" target="_blank">styleshout</a></span> 
+                    <span>Template by <a href="https://www.styleshout.com/free-templates/hola/" target="_blank">hola</a></span>	
+                </div>
+
+                <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var mobile =  CryptoJS.AES.decrypt("U2FsdGVkX18G9KzsfUMQsMod+ZjXaVbzPVBXRlwR8UXfCX6ONwXSJurO8W59uHEPF5l1qY56PQAaXfilJT+0ovpdksVxbJVatGEgBOPqz4g=", "8XCCD3Cnsiu4SDOJlhGEAXH0FTjXDWIU");
+        var email = CryptoJS.AES.decrypt("U2FsdGVkX18TY1vm+y3sSqr7p65ctfBbYgA6kq9Xoy+BCrb55kI7Afn5iPZtBwn5dpQ9BuuJb2QSQFU87AYBJ0RQ2wLgKMwJl71g700wwuNeO6fSx91AVrdfBRD/y47D1Y+uT5TY49RePxvezEH8jZjsyd3/uXn37ZKdxh37id+/w9bKD+l9J+DK88L52DkUSQr5Y6uPVyt/Pk4XVzqgwA==", "wA0AL5YYzgEnPYQckU4x8dBE9mzQiBlb");
+        var addr = CryptoJS.AES.decrypt("U2FsdGVkX18gi57+Al7Dq7zgj06UFCAo0Rs70jeDUcrYMqyj/DyMBKWOoQBExEnLYNGgNM5mJYioG5GFuyKD/88b2GX62PZ++EViKtH9Kq1ILBOf32xQejy48SUdl9UZwJpVDfhP1B8C4XpOLuyCS+DUT6JakHvJQpXPNXLcydk9cENNIw06z60CCvVfJ9ArMi6H9p0fqBt2J+gOiRWKwPYX+GZ8cavvwIq05koE+itiOKJF5mQh/ASp2yKKW+8Wh1msprQCn7hwLY6NzrjdQZBTUw1hfu6lsdbHUJVKGeI=", "rq5sACi73oZEkq5cw6o5bG74x0f1yWMS");
+        var cname = CryptoJS.AES.decrypt("U2FsdGVkX1/eiTEXid89gbC1uBnMdpjvCsqwyV/zFjvxWjy2wv6huQHIaCFmJIfcjeLgL9ZvJ+WwZA2bVryqJrkJfpuqtE2gBPlyRljFzjvQ7JCrRpQzlzF9rMEp0SKD", "yArN86KIFdHENkSlBHXGsBMkTTWPR9UG");
+        document.getElementById("c_mobile").innerHTML = mobile.toString(CryptoJS.enc.Utf8);
+        document.getElementById("c_email").innerHTML = email.toString(CryptoJS.enc.Utf8);
+        document.getElementById("c_addr").innerHTML = addr.toString(CryptoJS.enc.Utf8);
+        document.getElementById("c_name").innerHTML = cname.toString(CryptoJS.enc.Utf8);
+    </script>
+
+</body>
+
+</html>
