@@ -621,6 +621,7 @@
     </div>
 
 
+    <div id="elementH"></div>
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -628,12 +629,7 @@
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
     <script>
-        var margins = {
-        top: 70,
-        bottom: 40,
-        left: 30,
-        width: 550
-        };
+
         var mobile =  CryptoJS.AES.decrypt("U2FsdGVkX18G9KzsfUMQsMod+ZjXaVbzPVBXRlwR8UXfCX6ONwXSJurO8W59uHEPF5l1qY56PQAaXfilJT+0ovpdksVxbJVatGEgBOPqz4g=", "8XCCD3Cnsiu4SDOJlhGEAXH0FTjXDWIU");
         var email = CryptoJS.AES.decrypt("U2FsdGVkX18TY1vm+y3sSqr7p65ctfBbYgA6kq9Xoy+BCrb55kI7Afn5iPZtBwn5dpQ9BuuJb2QSQFU87AYBJ0RQ2wLgKMwJl71g700wwuNeO6fSx91AVrdfBRD/y47D1Y+uT5TY49RePxvezEH8jZjsyd3/uXn37ZKdxh37id+/w9bKD+l9J+DK88L52DkUSQr5Y6uPVyt/Pk4XVzqgwA==", "wA0AL5YYzgEnPYQckU4x8dBE9mzQiBlb");
         var addr = CryptoJS.AES.decrypt("U2FsdGVkX18gi57+Al7Dq7zgj06UFCAo0Rs70jeDUcrYMqyj/DyMBKWOoQBExEnLYNGgNM5mJYioG5GFuyKD/88b2GX62PZ++EViKtH9Kq1ILBOf32xQejy48SUdl9UZwJpVDfhP1B8C4XpOLuyCS+DUT6JakHvJQpXPNXLcydk9cENNIw06z60CCvVfJ9ArMi6H9p0fqBt2J+gOiRWKwPYX+GZ8cavvwIq05koE+itiOKJF5mQh/ASp2yKKW+8Wh1msprQCn7hwLY6NzrjdQZBTUw1hfu6lsdbHUJVKGeI=", "rq5sACi73oZEkq5cw6o5bG74x0f1yWMS");
@@ -646,33 +642,18 @@
         var generate = function()
         {
             var pdf = new jsPDF('p', 'pt', 'a4');
-            pdf.setFontSize(18);
-            pdf.fromHTML(document.getElementById('html-2-pdfwrapper'), 
-                margins.left, // x coord
-                margins.top,
-                {
-                // y coord
-                width: margins.width// max width of content on PDF
-                },function(dispose) {
-                headerFooterFormatting(pdf)
-                }, 
-                margins);
+            var elementHTML = document.getElementById('html-2-pdfwrapper').innerHTML;
+            var specialElementHandlers = {
+                '#elementH': function (element, renderer) {
+                    return true;
+                }
+            };
+            pdf.fromHTML(elementHTML, 15, 15, {
+                'width': 170,
+                'elementHandlers': specialElementHandlers
+            });
                 
             pdf.save('resume-worawut.o.pdf');
-        };
-        function headerFooterFormatting(doc)
-        {
-            var totalPages  = doc.internal.getNumberOfPages();
-
-            for(var i = totalPages; i >= 1; i--)
-            { //make this page, the current page we are currently working on.
-                doc.setPage(i);      
-                            
-                header(doc);
-                
-                footer(doc, i, totalPages);
-                
-            }
         };
     </script>
 
